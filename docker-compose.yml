@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:13.3
+    container_name: postgres-services
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: "coffee_db"
+      POSTGRES_USER: "coffee_user"
+      POSTGRES_PASSWORD: "coffee_password"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - ./dbdata:/var/lib/postgresql/data
+      - ./dbroot:/root

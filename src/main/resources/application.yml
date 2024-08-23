@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/coffee_db"
+    username: coffee_user
+    password: coffee_password
+  jpa:
+    hibernate:
+      ddl-auto: validate
